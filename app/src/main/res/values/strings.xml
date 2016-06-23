@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AndroidRecipes</string>
+
+    <string name="login.error">Imposible iniciar sesion %s</string>
+    <string name="login.cancel.error">Inicio de sesion cancelada</string>
+
+    <string name="recipemain.notice.saved">Guardado Exitosamente</string>
+    <string name="recipemain.error">Imposible obtener informacion %s</string>
+
+    <string name="recipemain.menu.action.list">Recetas guardadas</string>
+    <string name="recipelist.menu.action.main">Elegir recetas</string>
+    <string name="global.menu.action.logout">Cerrar sesión</string>
+</resources>
