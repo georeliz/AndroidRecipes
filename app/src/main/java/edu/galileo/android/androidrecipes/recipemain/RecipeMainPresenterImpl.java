@@ -85,6 +85,14 @@ public class RecipeMainPresenterImpl implements RecipeMainPresenter {
         }
 
     }
+    @Override
+    public void imageReady() {
+        if (this.view != null){
+            view.hideProgressBar();
+            view.showElements();
+        }
+
+    }
 
     @Override
     public void imageError(String error) {
@@ -94,14 +102,6 @@ public class RecipeMainPresenterImpl implements RecipeMainPresenter {
 
     }
 
-    @Override
-    public void imageReady() {
-        if (this.view != null){
-            view.hideProgressBar();
-            view.showElements();
-        }
-
-    }
 
     @Override
     public RecipeMainView getView() {

@@ -30,7 +30,7 @@ public class RecipeSearchResponse {
     public Recipe getFirstRecipe(){
         Recipe first = null;
 
-        if (recipes.isEmpty()){
+        if (!recipes.isEmpty()){
             first = recipes.get(0);
         }
 

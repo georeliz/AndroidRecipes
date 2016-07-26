@@ -3,12 +3,19 @@ package edu.galileo.android.androidrecipes;
 import android.app.Application;
 import android.content.Intent;
 
+
 import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
 import com.raizlabs.android.dbflow.config.FlowManager;
 
 import edu.galileo.android.androidrecipes.libs.di.LibsModule;
 import edu.galileo.android.androidrecipes.login.ui.LoginActivity;
+import edu.galileo.android.androidrecipes.recipelist.adapters.OnItemClickListener;
+import edu.galileo.android.androidrecipes.recipelist.di.DaggerRecipeListComponent;
+import edu.galileo.android.androidrecipes.recipelist.di.RecipeListComponent;
+import edu.galileo.android.androidrecipes.recipelist.di.RecipeListModule;
+import edu.galileo.android.androidrecipes.recipelist.ui.RecipeListActivity;
+import edu.galileo.android.androidrecipes.recipelist.ui.RecipeListView;
 import edu.galileo.android.androidrecipes.recipemain.di.DaggerRecipeMainComponent;
 import edu.galileo.android.androidrecipes.recipemain.di.RecipeMainComponent;
 import edu.galileo.android.androidrecipes.recipemain.di.RecipeMainModule;
@@ -44,6 +51,7 @@ public class FacebookRecipesApp extends Application {
 
     private void initFacebook() {
         FacebookSdk.sdkInitialize(this);
+
     }
 
     public void logout() {
@@ -54,8 +62,18 @@ public class FacebookRecipesApp extends Application {
     }
 
     public RecipeMainComponent getRecipeMainComponent(RecipeMainActivity activity, RecipeMainView view){
-        return DaggerRecipeMainComponent.builder().libsModule(new LibsModule(activity))
+        return DaggerRecipeMainComponent
+                .builder()
+                .libsModule(new LibsModule(activity))
                 .recipeMainModule(new RecipeMainModule(view))
+                .build();
+    }
+
+    public RecipeListComponent getRecipeListComponent(RecipeListActivity activity, RecipeListView view, OnItemClickListener clickListener){
+        return DaggerRecipeListComponent
+                .builder()
+                .libsModule(new LibsModule(activity))
+                .recipeListModule(new RecipeListModule(view, clickListener))
                 .build();
     }
 }

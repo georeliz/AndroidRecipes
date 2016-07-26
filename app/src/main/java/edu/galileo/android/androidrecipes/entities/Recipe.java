@@ -14,8 +14,7 @@ import edu.galileo.android.androidrecipes.db.RecipesDataBase;
 @Table(database = RecipesDataBase.class)
 public class Recipe  extends BaseModel {
     @SerializedName("recipe_id")
-    @PrimaryKey
-    private String recipeId;
+    @PrimaryKey private String recipeId;
 
     @Column private String title;
 
@@ -71,7 +70,7 @@ public class Recipe  extends BaseModel {
     public boolean equals(Object obj){
         boolean equal = false;
         if (obj instanceof Recipe){
-            Recipe recipe = (Recipe) obj;
+            Recipe recipe = (Recipe)obj;
             equal = this.recipeId.equals(recipe.getRecipeId());
 
         }
