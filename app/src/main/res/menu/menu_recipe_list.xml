@@ -11,6 +11,15 @@
         app:showAsAction="always" />
 
     <item
+        android:id="@+id/action_show_all"
+        android:title="@string/global.menu.action.show.all"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_fav"
+        android:title="@string/global.menu.action.show.fav"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_logout"
         android:title="@string/global.menu.action.logout"
         app:showAsAction="never" />

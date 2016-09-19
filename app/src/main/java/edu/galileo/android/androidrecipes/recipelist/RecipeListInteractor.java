@@ -5,4 +5,5 @@ package edu.galileo.android.androidrecipes.recipelist;
  */
 public interface RecipeListInteractor {
     void execute();
+    void searchFav();
 }

@@ -108,10 +108,10 @@ public class RecipeMainActivity extends AppCompatActivity implements RecipeMainV
         int id = item.getItemId();
         if (id == R.id.action_list){
             navigateToListScreen();
-
+            return true;
         }else if (id == R.id.action_logout){
             logout();
-
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

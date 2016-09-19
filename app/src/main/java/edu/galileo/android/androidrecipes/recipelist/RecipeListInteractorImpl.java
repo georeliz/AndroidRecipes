@@ -14,4 +14,9 @@ public class RecipeListInteractorImpl implements RecipeListInteractor {
     public void execute() {
         repository.getSavedRecipes();
     }
+
+    @Override
+    public void searchFav() {
+        repository.getFavoritesRecipes();
+    }
 }

@@ -9,4 +9,6 @@ public interface RecipeListRepository {
     void getSavedRecipes();
     void updateRecipe(Recipe recipe);
     void removeRecipe(Recipe recipe);
+
+    void getFavoritesRecipes();
 }

@@ -8,7 +8,10 @@
     <string name="recipemain.error">Imposible obtener informacion %s</string>
 
     <string name="recipemain.menu.action.list">Recetas guardadas</string>
+
     <string name="recipelist.menu.action.main">Elegir recetas</string>
     <string name="global.menu.action.logout">Cerrar sesión</string>
+    <string name="global.menu.action.show.all">Ver todos</string>
+    <string name="global.menu.action.show.fav">Ver Favoritos</string>
     <string name="recipemain.menu.action.main">Elegir receta</string>
 </resources>
